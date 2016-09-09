@@ -5,5 +5,5 @@ get '/' do
   'Hello Sinatra'
 end
 
-server = Server.new(Sinatra::Application.new)
+server = Server.new(Sinatra::Application)
 server.start 
