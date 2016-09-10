@@ -4,6 +4,22 @@ A simple Rack Web Server that demostrates how to talk to Rack applications.
 
 ## Example applications
 
+The simplest Rack application:
+
+```ruby
+# rack_app.rb
+require "server"
+
+app = lambda do |env|
+  [200, {"Content-Type" => "text/html"}, ["Hello World"]]
+end
+
+server = Server.new(app)
+server.start
+```
+
+Here we use our own Web Server called **Server**.
+
 The following Rack appliaction shows how to create a static web site:
 
 ```ruby
